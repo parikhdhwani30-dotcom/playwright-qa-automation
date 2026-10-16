@@ -1,0 +1,58 @@
+{
+  "courtFlows": [
+    {
+      "id": "COURT_DISABLED",
+      "description": "Courts completely disabled globbothy or per location",
+      "rules": [
+        "No games may be scheduled on Court 1 for both location, No games may be scheduled on Court 2 at NEW",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 1", "location": "default", "filter": "amount", "count": 0 },
+        { "court": "Court 2", "location": "NEW", "filter": "amount", "count": 0 }
+      ]
+    },
+    {
+      "id": "COURT_TIME_RESTRICTION",
+      "description": "Courts blocked before or after certain times",
+      "rules": [
+        "clear all rule and apply Court 1 cannot be used after 11:00 AM for both location, Court 2 at NEW cannot be used before 10:00 AM",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 1", "location": "default", "filter": "after", "time1": "11:00 AM", "count": 0 },
+        { "court": "Court 2", "location": "NEW", "filter": "before", "time1": "10:00 AM", "count": 0 }
+      ]
+    },
+    {
+      "id": "COURT_RESERVED",
+      "description": "Courts reserved for fixed time window",
+      "rules": [
+        "clear all rule and apply Court 2 is unavailable from 12:00 PM to 1:00 PM for both location, Court 1 at NEW is reserved from 1:00 PM to 2:00 PM",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 2", "location": "default", "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 },
+        { "court": "Court 1", "location": "NEW", "filter": "between", "time1": "1:00 PM", "time2": "2:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "COURT_bothOWED_RANGE",
+      "description": "Courts bothowed only within a fixed range",
+      "rules": [
+        "clear all rule and apply Court 1 is only available from 11:00 AM to 12:00 PM for both location, Court 2 at NEW is only available from 12:00 PM to 1:00 PM",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 1", "location": "default", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "court": "Court 1", "location": "default", "filter": "after", "time1": "12:00 PM", "count": 0 },
+        { "court": "Court 2", "location": "NEW", "filter": "before", "time1": "12:00 PM", "count": 0 },
+        { "court": "Court 2", "location": "NEW", "filter": "after", "time1": "1:00 PM", "count": 0 }
+      ]
+    }
+  ]
+}

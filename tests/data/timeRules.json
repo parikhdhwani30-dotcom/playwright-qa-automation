@@ -1,0 +1,38 @@
+{
+  "timeFlows": [
+    {
+      "id": "GLOBAL_LIMITS",
+      "description": "Checks the 11AM-4PM operational window and the 12PM-2PM lunch block.",
+      "rules": [
+        "clear all rules. No games before 11:00 AM. No games after 4:00 PM. No games between 12:00 PM and 2:00 PM. No games between 3:00 PM and 4:00 PM.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "default", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "location": "default", "filter": "after", "time1": "4:00 PM", "count": 0 },
+        { "location": "default", "filter": "between", "time1": "12:00 PM", "time2": "2:00 PM", "count": 0 },
+        { "location": "default", "filter": "between", "time1": "3:00 PM", "time2": "4:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "LOCATION_SPECIFIC_STRESS_TEST",
+      "description": "Specific logic for ahmedabad and NEW including the 5:30 PM maintenance edge case.",
+      "rules": [
+        "clear all rule and apply Location ahmedabad: No games before 11AM, after 4PM, or during 12-1PM and 3-4PM. Location NEW: No games before 11AM, after 4PM, or during 12-2PM and 5-5:30PM.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "location": "ahmedabad", "filter": "after", "time1": "4:00 PM", "count": 0 },
+        { "location": "ahmedabad", "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 },
+        { "location": "ahmedabad", "filter": "between", "time1": "3:00 PM", "time2": "4:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "location": "NEW", "filter": "after", "time1": "4:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "between", "time1": "12:00 PM", "time2": "2:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "between", "time1": "5:00 PM", "time2": "5:30 PM", "count": 0 }
+      ]
+    }
+  ]
+}

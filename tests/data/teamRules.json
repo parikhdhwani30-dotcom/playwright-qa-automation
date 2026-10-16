@@ -1,0 +1,97 @@
+{
+  "teamFlows": [
+    {
+      "id": "TEAM_IDENTITY_CONSTRAINTS",
+      "description": "Validates specific team-location and team-court lockdowns.",
+      "rules": [
+        "clear all rules. Panthers Crossroads: No play before 11AM, max 6 games, must play ONLY at ahmedabad. Panthers Frontier: Prefer to play at NEW. Panthers Tri-State: Can play at any location.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Crossroads", "location": "NEW", "filter": "amount", "count": 0, "note": "Locked to ahmedabad" },
+        { "team": "Panthers Frontier", "location": "ahmedabad", "filter": "amount", "count": 0, "note": "Prefers NEW" },
+        { "team": "Panthers Crossroads", "location": "default", "filter": "before", "time1": "11:00 AM", "count": 0 }
+      ]
+    },
+    {
+      "id": "SIMULTANEOUS_AND_CONFLICT_LOGIC",
+      "description": "Checks complex inter-team dependencies and simultaneous play blocks.",
+      "rules": [
+        "clear all rules. Panthers Crossroads and Panthers Vanguard cannot play at the same time. Panthers Tri-State cannot play when Panthers Frontier is playing. Court 1 at ahmedabad must remain empty on all days.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "court": "Court 1", "filter": "amount", "count": 0, "note": "Court 1 must remain empty" },
+        { "location": "default", "filter": "simultaneous_check", "teams": ["Panthers Crossroads", "Panthers Vanguard"], "count": 0 },
+        { "location": "default", "filter": "simultaneous_check", "teams": ["Panthers Tri-State", "Panthers Frontier"], "count": 0 }
+      ]
+    },
+    {
+      "id": "LOCATION_STRESS_TEST",
+      "description": "Verifies specific school and house rules including the 5:30 PM edge case.",
+      "rules": [
+        "ahmedabad: No games before 11AM, after 4PM, or during 12-1PM and 3-4PM. At NEW: No games before 11AM, after 4PM, or during 12-2PM and 5-5:30PM.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "location": "ahmedabad", "filter": "after", "time1": "4:00 PM", "count": 0 },
+        { "location": "ahmedabad", "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 },
+        { "location": "ahmedabad", "filter": "between", "time1": "3:00 PM", "time2": "4:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "location": "NEW", "filter": "after", "time1": "4:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "between", "time1": "12:00 PM", "time2": "2:00 PM", "count": 0 },
+        { "location": "NEW", "filter": "between", "time1": "5:00 PM", "time2": "5:30 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "SEQUENCE_AND_TIME_SLOT_LOGIC",
+      "description": "Checks first/last game rules and back-to-back restrictions.",
+      "rules": [
+        "clear all rules. Opening at ahmedabad: Panthers Crossroads vs Panthers Vanguard. Panthers Tri-State: Must have a 1-hour rest period between games. Panthers Frontier at Pool 10: Must alternate courts every game; specifically, if on Court 1, next is Court 2.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "filter": "first_slot", "match": "Panthers Crossroads vs Panthers Vanguard", "count": 1 },
+        { "team": "Panthers Tri-State", "filter": "gap_check", "gapMinutes": 60, "count": 0 }
+      ]
+    },
+    {
+      "id": "TEAM_NEW_REQUIREMENTS",
+      "description": "Validates specific team-location-court-time constraints for Panthers teams at ahmedabad and NEW locations.",
+      "rules": [
+        "clear all rules. Panthers Crossroads: Only at ahmedabad on Court 3 between 2PM-7PM, or at NEW on Court 3 after 11AM. Panthers Frontier: Only at NEW on Court 2 after 10AM. Panthers Tri-State: Only at ahmedabad on Court 2 before 4PM, or at NEW on Court 2 after 4PM. Panthers Vanguard: Only at ahmedabad on Court 1 and must finish before 12PM.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+    { "team": "Panthers Frontier", "location": "ahmedabad", "filter": "amount", "count": 0 },
+    { "team": "Panthers Frontier", "location": "NEW", "court": "Court 2", "filter": "after", "time1": "10:00 AM" },
+    { "team": "Panthers Crossroads", "location": "ahmedabad", "court": "Court 3", "filter": "between", "time1": "2:00 PM", "time2": "7:00 PM" },
+    { "team": "Panthers Crossroads", "location": "NEW", "court": "Court 3", "filter": "after", "time1": "11:00 AM" },
+    { "team": "Panthers Tri-State", "location": "ahmedabad", "court": "Court 2", "filter": "before", "time1": "4:00 PM" },
+    { "team": "Panthers Tri-State", "location": "NEW", "court": "Court 2", "filter": "after", "time1": "4:00 PM" },
+    { "team": "Panthers Vanguard", "location": "ahmedabad", "court": "Court 1", "filter": "before", "time1": "12:00 PM" }
+  ]
+    },
+    {
+      "id": "TEAM_LOCATION_COURT_STRESS_TEST",
+      "description": "Checks team-specific lockdowns for ahmedabad and NEW across specific courts 1 and 2.",
+      "rules": [
+       "clear all rules. Panthers Crossroads: Must play at ahmedabad on Court 1 or 2. Panthers Frontier: Must play at NEW on Court 1. ALLOW Panthers Frontier to play at ahmedabad on Court 1 ONLY when playing Panthers Crossroads.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Crossroads", "location": "NEW", "filter": "amount", "count": 0, "note": "Locked to ahmedabad" },
+        { "team": "Panthers Crossroads", "location": "ahmedabad", "court": "Court 3", "filter": "amount", "count": 0, "note": "Only Court 1 or 2 allowed" },
+        { "team": "Panthers Frontier", "location": "ahmedabad", "filter": "amount", "count": 0, "note": "Locked to NEW" },
+        { "team": "Panthers Frontier", "location": "NEW", "court": "Court 2", "filter": "amount", "count": 0, "note": "Only Court 1 allowed" }
+      ]
+    }
+  ]
+}

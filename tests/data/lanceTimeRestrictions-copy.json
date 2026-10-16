@@ -1,0 +1,115 @@
+{
+  "timeRestrictionsFlows": [
+ 
+
+    {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_2",
+      "description": "Court 1 at ahmedabad opens at 9am instead of 10am",
+      "rules": [
+        "clear all rules. Court 1 at ahmedabad opens at 9am instead of 10am",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "court": "Court 1", "filter": "before", "time1": "9:00 AM", "count": 0 },
+        { "location": "ahmedabad", "court": "Court 1", "filter": "between", "time1": "9:00 AM", "time2": "10:00 AM", "count": 0, "operator": "greaterThan" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_3",
+      "description": "ahmedabad closes at 5pm",
+      "rules": [
+        "clear all rules. ahmedabad closes at 5pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_UNAVAILABLE_1",
+      "description": "Court 3 is closed for cleaning 12-1pm",
+      "rules": [
+        "clear all rules. Court 3 is closed for cleaning 12-1pm for all locations.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 3", "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_UNAVAILABLE_2",
+      "description": "Floor maintenance on all courts at noon for 30 m",
+      "rules": [
+        "clear all rules. Floor maintenance on all courts at noon for 30 m.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "between", "time1": "12:00 PM", "time2": "12:30 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_1",
+      "description": "No games on June 13th",
+      "rules": [
+        "clear all rules. No games on June 6th.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_2",
+      "description": "Block out Sunday June 21st, entirely",
+      "rules": [
+        "clear all rules. Block out Sunday June 21st, entirely.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_3",
+      "description": "Don't schedule anything on Sunday June 21st",
+      "rules": [
+        "clear all rules. Don't schedule anything on Sunday June 21st.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BEFORE_2",
+      "description": "Panthers Vanguard can't play Saturday June 20th before 11am but Sunday before 10am, is fine",
+      "rules": [
+        "clear all rules. Panthers Vanguard can't play Saturday June 20th before 11am but Sunday before 10am, is fine.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Vanguard", "filter": "before", "time1": "11:00 AM", "count": 0, "note": "Default day is Saturday" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BEFORE_3",
+      "description": "Block Panthers Frontier from morning games only on day 2 before 10am",
+      "rules": [
+        "clear all rules. Block Panthers Frontier from morning games only on day 2 before 10am. please understand exact i said",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "day": "Day 2: Saturday, June 13th, 2026", "filter": "before", "time1": "10:00 AM", "count": 0 }
+      ]
+    }
+  ]
+}

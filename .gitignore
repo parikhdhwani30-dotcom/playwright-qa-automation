@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+allure-report/
+allure-results/
+downloads/
+playwright-report/
+.agent\skills/
+.env.prod/
+.env.qa/
+.env.dev/

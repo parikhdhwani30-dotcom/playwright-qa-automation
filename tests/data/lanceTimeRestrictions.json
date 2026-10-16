@@ -1,0 +1,488 @@
+{
+  "timeRestrictionsFlows": [
+    {
+      "id": "MORNING_BLACKOUT",
+      "description": "Morning Blackout - Team cannot play before a specific time",
+      "rules": [
+        "clear all rules. Panthers Frontier can't play before 10am. No games before noon for Panthers Tri-State. Don't schedule Panthers Vanguard before 11am. We need a late start — nothing before 10:30am for Panthers Crossroads.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "before", "time1": "10:00 AM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "before", "time1": "12:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "before", "time1": "11:00 AM", "count": 0 },
+        { "team": "Panthers Crossroads", "filter": "before", "time1": "10:30 AM", "count": 0 }
+      ]
+    },
+    {
+      "id": "MORNING_BLACKOUT_GLOBAL",
+      "description": "Morning Blackout (Global) - No team plays before a specific time",
+      "rules": [
+        "clear all rules. No games before 9am for any team. First games start at 10:00am.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "default", "filter": "before", "time1": "10:00 AM", "count": 0 }
+      ]
+    },
+    {
+      "id": "LATE_ARRIVAL",
+      "description": "Late Arrival - Team arriving late, can't play early",
+      "rules": [
+       "clear all rules. Panthers Frontier is flying in Saturday morning, no games before 1pm Saturday. The Panthers Tri-State team arrives at noon, no games before noon on Saturday . Panthers Vanguard won't get here until 2pm, no games before 2 pm on Saturday ",
+       "no",
+       "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "before", "time1": "1:00 PM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "before", "time1": "12:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "before", "time1": "2:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "EVENING_CURFEW",
+      "description": "Evening Curfew - Team cannot play after a specific time",
+      "rules": [
+        "clear all rules. Panthers Frontier can't play after 6pm. No games after 5pm for Panthers Tri-State. Panthers Vanguard needs to leave by 4:30pm. Last game must end by 5pm for Panthers Crossroads.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "after", "time1": "6:00 PM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "after", "time1": "5:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "after", "time1": "4:30 PM", "count": 0 },
+        { "team": "Panthers Crossroads", "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "EVENING_CURFEW_GLOBAL",
+      "description": "Evening Curfew (Global) - No games after a specific time for anyone",
+      "rules": [
+        "clear all rules. Last game at 8pm. Nothing after 9pm. Facility closes at 10pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "default", "filter": "after", "time1": "8:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "EARLY_DEPARTURE",
+      "description": "Early Departure - Team leaving early, must finish by time",
+      "rules": [
+        "clear all rules. Panthers Frontier has a flight at 5pm Sunday, last game by 2pm. The Panthers Tri-State team needs to leave by 3pm. Schedule Panthers Vanguard last game no later than 1pm Sunday.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "after", "time1": "2:00 PM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "after", "time1": "3:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "after", "time1": "1:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "MIDDAY_BREAK",
+      "description": "Midday Break - Team blocked during a time window",
+      "rules": [
+        "clear all rules. Panthers Frontier can't play between 12-2pm. Block Panthers Tri-State from noon to 2pm. No games 1-3pm for Panthers Vanguard. Panthers Crossroads has a team meeting at 1pm - 2pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "between", "time1": "12:00 PM", "time2": "2:00 PM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "between", "time1": "12:00 PM", "time2": "2:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "between", "time1": "1:00 PM", "time2": "3:00 PM", "count": 0 },
+        { "team": "Panthers Crossroads", "filter": "between", "time1": "1:00 PM", "time2": "2:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "EXACT_WINDOW",
+      "description": "Exact Window - Team can ONLY play during a specific window",
+      "rules": [
+      "clear all rules. Panthers Frontier can only play between 9am-5pm. Schedule Panthers Tri-State only in the morning 8am-1pm. Panthers Vanguard can only do afternoon games 12pm-5pm.",
+      "no",
+       "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "filter": "before", "time1": "9:00 AM", "count": 0 },
+        { "team": "Panthers Frontier", "filter": "after", "time1": "5:00 PM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "before", "time1": "8:00 AM", "count": 0 },
+        { "team": "Panthers Tri-State", "filter": "after", "time1": "1:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "before", "time1": "12:00 PM", "count": 0 },
+        { "team": "Panthers Vanguard", "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "FACILITY_OPEN_CLOSE",
+      "description": "Facility Open/Close - Facility has specific operating hours",
+      "rules": [
+        "clear all rules. The NEW opens at 9am and closes at 11pm. Courts at location ahmedabad hours are 8:30am to 9:30pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [     
+        { "location": "NEW", "filter": "before", "time1": "9:00 AM", "count": 0 },
+         { "location": "NEW", "filter": "after", "time1": "11:00 PM", "count": 0 },
+        { "location": "ahmedabad", "filter": "before", "time1": "8:30 AM", "count": 0 },
+        { "location": "ahmedabad", "filter": "after", "time1": "9:30 PM", "count": 0 }
+       
+      ]
+    },
+    {
+      "id": "SPECIFIC_DAY_ONLY",
+      "description": "Specific Day Only - Team can only play on a specific day",
+      "rules": [
+        "clear all rules. Panthers Northeast can only play Sunday.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Northeast", "filter": "amount", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BEFORE_1",
+      "description": "No 10U games before 10am and after 5pm.",
+      "rules": [
+        "clear all rules. No 10U games before 10am and after 5pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "ageGroup": "10", "filter": "before", "time1": "10:00 AM", "count": 0 },
+        { "ageGroup": "10", "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_AFTER_1",
+      "description": "11U should be done by 6",
+      "rules": [
+        "clear all rules. 11U should be done by 6:00 PM.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "ageGroup": "11", "filter": "after", "time1": "6:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_1",
+      "description": "No games between 12-1pm for anyone",
+      "rules": [
+        "clear all rules. No games between 12-1pm for anyone.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_2",
+      "description": "Block 12:30 PM-1:30 PM for lunch",
+      "rules": [
+        "clear all rules. Block 12:30 PM-1:30 PM for lunch.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "between", "time1": "12:30 PM", "time2": "1:30 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_3",
+      "description": "No games Sunday before noon",
+      "rules": [
+        "clear all rules. No games Sunday before noon.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "before", "time1": "12:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_4",
+      "description": "No games on Sunday morning",
+      "rules": [
+        "clear all rules. No games on Sunday morning.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "before", "time1": "12:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_5",
+      "description": "Don't schedule anything Sunday morning",
+      "rules": [
+        "clear all rules. Don't schedule anything Sunday morning.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "before", "time1": "12:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BETWEEN_6",
+      "description": "Block 9-11am Sunday for church",
+      "rules": [
+        "clear all rules. Block 9-11am Sunday for church.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "between", "time1": "9:00 AM", "time2": "11:00 AM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_DAY_RESTRICTION_1",
+      "description": "We're only available Sunday",
+      "rules": [
+        "clear all rules. We're only available Sunday.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 3: Saturday, June 20th, 2026", "filter": "amount", "count": 0 }
+      ]
+    },
+    
+    {
+      "id": "TIME_RESTRICTION_DAY_RESTRICTION_2",
+      "description": "Schedule all our games on day 1",
+      "rules": [
+        "clear all rules. Schedule all our games on day 1.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "amount", "operator": "greaterThan", "count": 0, "note": "Day 1 should have more than 0 scheduled games" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_LAST_GAME_BY_1",
+      "description": "Make sure the Panthers Tri-State last game is done by 4pm",
+      "rules": [
+        "clear all rules. Make sure the Panthers Tri-State last game is done by 4pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Tri-State", "filter": "after", "time1": "4:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_LAST_GAME_BY_2",
+      "description": "Panthers Vanguard last game by 3pm Sunday",
+      "rules": [
+        "clear all rules. Panthers Vanguard last game by 3pm Sunday.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Vanguard", "day": "Day 4: Sunday, June 21st, 2026", "filter": "after", "time1": "3:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_LAST_GAME_BY_3",
+      "description": "Final game must end before 5",
+      "rules": [
+        "clear all rules. Final game must end before 5.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_EXCLUSIVE_TIME_RANGE_1",
+      "description": "If a team plays after 8pm, don't schedule them before 10am the next day",
+      "rules": [
+        "clear all rules. If a team plays after 8pm, don't schedule them before 10am the next day.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+         { "day": "Day 2: Saturday, June 13th, 2026", "filter": "before", "time1": "10:00 AM", "count": 0, "note": "General check" }
+      ]
+    },
+  {
+      "id": "TIME_RESTRICTION_EXCLUSIVE_TIME_RANGE_2",
+      "description": "No team should play a game at 9pm or later on one day, then play another game before 9am the next day",
+      "rules": [
+        "clear all rules. Any team that plays at 9 PM or later must be given at least 12 hours of rest before their first game the next day. Also, schedule exactly one game for Panthers Tri-State at 9:30 PM on Day 1.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+      { "day": "Day 2: Saturday, June 13th, 2026", "team": "Panthers Tri-State", "filter": "before", "time1": "9:00 AM", "count": 0, "note": "Checks that the team forced to play late does not play early" }
+      ]
+    },
+       {
+      "id": "TIME_RESTRICTION_EXCLUSIVE_TIME_RANGE_3",
+      "description": "Panthers Tri-State teams from back-to-back evening 5pm onwards to morning before 10am",
+      "rules": [
+        "clear all rules. Panthers Tri-State teams from all pool cannot have back-to-back games where one game is at 5pm or later in the evening and the next game is before 10am the next morning. Schedule exactly one game for Panthers Tri-State at 5:30 PM on Day 1.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 2: Saturday, June 13th, 2026", "team": "Panthers Tri-State", "filter": "before", "time1": "10:00 AM", "count": 0, "note": "Trap check: ensure forced late team does not play early next day" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_EXCLUSIVE_TIME_RANGE_4",
+      "description": "No late-night , 7pm onwards, then early-morning , before 9amgames",
+      "rules": [
+        "clear all rules. No late-night , 7pm onwards, then early-morning , before 9am games.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "before", "time1": "9:00 AM", "count": 0, "note": "General check" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_1",
+      "description": "Court 1 is available 8am-6pm",
+      "rules": [
+        "clear all rules. Court 1 is available 8am-6pm for all location.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 1", "filter": "before", "time1": "8:00 AM", "count": 0 },
+        { "court": "Court 1", "filter": "after", "time1": "6:00 PM", "count": 0 }
+     
+      ]
+    },
+     {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_11",
+      "description": "Court 2 9am-10pm both location",
+      "rules": [
+        "clear all rules. Court 2 9am-10pm both location.",
+        "no",
+        "yes"
+      ],
+      "expected": [      
+        { "court": "Court 2", "filter": "before", "time1": "9:00 AM", "count": 0 },
+        { "court": "Court 2", "filter": "after", "time1": "10:00 PM", "count": 0 }
+      ]
+    },
+  {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_2",
+      "description": "Court 1 at ahmedabad opens at 9am instead of 10am",
+      "rules": [
+        "clear all rules. Court 1 at ahmedabad opens at 9am instead of 10am",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "court": "Court 1", "filter": "before", "time1": "9:00 AM", "count": 0 },
+        { "location": "ahmedabad", "court": "Court 1", "filter": "between", "time1": "9:00 AM", "time2": "10:00 AM", "count": 0, "operator": "greaterThan" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_AVAILABLE_WINDOW_3",
+      "description": "ahmedabad closes at 5pm",
+      "rules": [
+        "clear all rules. ahmedabad closes at 5pm.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "location": "ahmedabad", "filter": "after", "time1": "5:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_UNAVAILABLE_1",
+      "description": "Court 3 is closed for cleaning 12-1pm",
+      "rules": [
+        "clear all rules. Court 3 is closed for cleaning 12-1pm for all locations.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "court": "Court 3", "filter": "between", "time1": "12:00 PM", "time2": "1:00 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_COURT_UNAVAILABLE_2",
+      "description": "Floor maintenance on all courts at noon for 30 m",
+      "rules": [
+        "clear all rules. Floor maintenance on all courts at noon for 30 m.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "between", "time1": "12:00 PM", "time2": "12:30 PM", "count": 0 }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_1",
+      "description": "No games on March 7th",
+      "rules": [
+        "clear all rules. No games on March 7th.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_2",
+      "description": "Block out Sunday June 21st, entirely",
+      "rules": [
+        "clear all rules. Block out Sunday June 21st, entirely.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_BLACKOUT_DATE_3",
+      "description": "Don't schedule anything on Sunday June 21st",
+      "rules": [
+        "clear all rules. Don't schedule anything on Sunday June 21st.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "day": "Day 4: Sunday, June 21st, 2026", "filter": "amount", "count": 0, "note": "Placeholder" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BEFORE_2",
+      "description": "Panthers Vanguard can't play Saturday June 20th before 11am but Sunday before 10am, is fine",
+      "rules": [
+        "clear all rules. Panthers Vanguard can't play Saturday June 20th before 11am but Sunday before 10am, is fine.",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Vanguard", "filter": "before", "time1": "11:00 AM", "count": 0, "note": "Default day is Saturday" }
+      ]
+    },
+    {
+      "id": "TIME_RESTRICTION_NO_GAMES_BEFORE_3",
+      "description": "Block Panthers Frontier from morning games only on day 2 before 10am",
+      "rules": [
+        "clear all rules. Block Panthers Frontier from morning games only on day 2 before 10am. please understand exact i said",
+        "no",
+        "yes"
+      ],
+      "expected": [
+        { "team": "Panthers Frontier", "day": "Day 2: Saturday, June 13th, 2026", "filter": "before", "time1": "10:00 AM", "count": 0 }
+      ]
+    }
+  ]
+}

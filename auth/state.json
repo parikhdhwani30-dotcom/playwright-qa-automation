@@ -1,0 +1,61 @@
+{
+  "cookies": [
+    {
+      "name": "access_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc4ODg0MzQ0MywiZXhwIjoxNzkxNDM1NDQzfQ.DX8g7pZDeUgCsW1h9YtvZgq0emXC7hhSuhbAhXngq44",
+      "domain": ".sketchplayqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://web.sketchplayqa.com",
+      "localStorage": [
+        {
+          "name": "lastPlayedVideo",
+          "value": "https://storage.googleapis.com/sketchplay/Drone_Shot_of_Youth_Flag_Football_Practice.mp4"
+        },
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc4ODg0MzQ0MywiZXhwIjoxNzkxNDM1NDQzfQ.DX8g7pZDeUgCsW1h9YtvZgq0emXC7hhSuhbAhXngq44"
+        },
+        {
+          "name": "data-mode",
+          "value": "dark"
+        },
+        {
+          "name": "showLoginCommunityPopup",
+          "value": "false"
+        },
+        {
+          "name": "currentUser",
+          "value": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc4ODg0MzQ0MywiZXhwIjoxNzkxNDM1NDQzfQ.DX8g7pZDeUgCsW1h9YtvZgq0emXC7hhSuhbAhXngq44\",\"id\":5296,\"firstName\":\"Dhwanis\",\"lastName\":\"Parikh\",\"email\":\"dhwani@yopmail.com\",\"dialCode\":\"US\",\"countryCode\":\"+1\",\"mobile\":\"9512672992\",\"isEmailVerified\":false,\"isMobileVerified\":false,\"isPasswordReseted\":false,\"isVerified\":true,\"username\":null,\"isOldPrimaryContact\":false,\"address1\":\"Road 49, Fort Calhoun, NE, USA\",\"address2\":\"dhwani\",\"city\":\"Washington Countysdsd\",\"state\":\"Venaz\",\"zipCode\":\"68023\",\"dob\":\"2026-01-14T00:00:00.000Z\",\"gpa\":3,\"heightFeet\":10,\"heightInch\":10,\"weight\":147,\"school\":\"SSVVVV\",\"isOptIn\":true,\"optDate\":\"2026-03-16T14:31:09.377Z\",\"timeZone\":\"Asia/Calcutta\",\"profilePictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/image_cropper_7AE7FA5D-D458-4EBC-A53E-8FF523EF4D9B_1773656829363_qeugp.jpg?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=A1cXFoJgsVToTmp%2B8PnYZSw%2B%2FucKzCXIPB30w81gfTMxkt%2B36bdsNdH4zTCqAYCo%2FAFF9L2%2BsV8eNT6kDOIccJruuIB6CM2VYOi58zp9E5txfI0n1Lf2vvYOSFbtusKErdZfgJ%2BItkkTSJsWmmFEWs%2BaNfnEUgYRxwXuHDM2%2BvZ665uycpcJexeCxBUrhIYbZc9oq%2F36YDml22MA3agDuJEvA%2BHAn%2FkpQSbMbHakzJ6L037L52bXlekrw68ZFnkRZ0fWuy4IuwCHZwQ7nqtw6iVpTS5WbW444IOjXftZais648xhdryC4iT8wgtGJhbzo5lkFZY72cptwRHGPQak3Q%3D%3D\",\"coverPictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/mobile_clinic_web_waivers_10_1776687931576_mi7ssdw24vp.webp?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=NTZmFPV%2B4kXcVyKKMxWfa0upOHt32F3RugCkAwe2vl2L4oao8mRCz0vtWISw7V5boZlKRLgCSjhrzMxpcE%2FqskLpLWQtYbcNC2fwcOK33MIUCbtqaaiOFJf1dc%2B0xS5kNAk15HGARKwQFUob%2B5hpaQb%2BJuQvJI1BewGRPCNuiqHnaBsJULIcz0jhda2morqvnsi739wRSmKvnVOYmvx8sFYVIVzva%2F67gtJwzjL%2Bv9FqJESRKIBQ58Eu7tNmEsRzj8Ey8BaGuX%2FCZv4nNCjXXcVQ14WqzYOl9D%2F8a9TJgNQ64n6OGU%2BqMnn5PGlDzw6DMd286vGq9GfOiVATurIxTw%3D%3D\",\"fbUrl\":\"https://wwdw.facebook.comds\",\"linkedinUrl\":\"https://www.linkedin.com/johndoe\",\"xUrl\":\"https://x.com\",\"instaUrl\":\"https://www.instagram.com/dimple/\",\"isSameEmail\":false,\"isSameMobile\":false,\"isSameAddress\":false,\"createdAt\":\"2026-01-07T06:24:21.491Z\",\"addFrom\":{\"apiUrl\":\"/verify-account\",\"description\":\"register user\",\"usedFunction\":\"verifyAccount\"},\"isShowMeScreen\":false,\"jerseyNumber\":\"$#$$77899\",\"jerseySize\":\"YS\",\"roles\":[\"user\",\"athlete\",\"admin\",\"parent\",\"coach\",\"manager\",\"scorekeeper\"],\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODg4NDM0NDMsImV4cCI6MTc5NjYxOTQ0M30.stHxXUL1vuwfo23xTV9ZseDKpIUiR9onuuvqASWFffg\"}"
+        },
+        {
+          "name": "organizations",
+          "value": "[]"
+        },
+        {
+          "name": "userDetailsFromUserMe",
+          "value": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc4ODg0MzQ0MywiZXhwIjoxNzkxNDM1NDQzfQ.DX8g7pZDeUgCsW1h9YtvZgq0emXC7hhSuhbAhXngq44\",\"id\":5296,\"firstName\":\"Dhwanis\",\"lastName\":\"Parikh\",\"email\":\"dhwani@yopmail.com\",\"dialCode\":\"US\",\"countryCode\":\"+1\",\"mobile\":\"9512672992\",\"isEmailVerified\":false,\"isMobileVerified\":false,\"isPasswordReseted\":false,\"isVerified\":true,\"username\":null,\"isOldPrimaryContact\":false,\"address1\":\"Road 49, Fort Calhoun, NE, USA\",\"address2\":\"dhwani\",\"city\":\"Washington Countysdsd\",\"state\":\"Venaz\",\"zipCode\":\"68023\",\"dob\":\"2026-01-14T00:00:00.000Z\",\"gpa\":3,\"heightFeet\":10,\"heightInch\":10,\"weight\":147,\"school\":\"SSVVVV\",\"isOptIn\":true,\"optDate\":\"2026-03-16T14:31:09.377Z\",\"timeZone\":\"Asia/Calcutta\",\"profilePictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/image_cropper_7AE7FA5D-D458-4EBC-A53E-8FF523EF4D9B_1773656829363_qeugp.jpg?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=A1cXFoJgsVToTmp%2B8PnYZSw%2B%2FucKzCXIPB30w81gfTMxkt%2B36bdsNdH4zTCqAYCo%2FAFF9L2%2BsV8eNT6kDOIccJruuIB6CM2VYOi58zp9E5txfI0n1Lf2vvYOSFbtusKErdZfgJ%2BItkkTSJsWmmFEWs%2BaNfnEUgYRxwXuHDM2%2BvZ665uycpcJexeCxBUrhIYbZc9oq%2F36YDml22MA3agDuJEvA%2BHAn%2FkpQSbMbHakzJ6L037L52bXlekrw68ZFnkRZ0fWuy4IuwCHZwQ7nqtw6iVpTS5WbW444IOjXftZais648xhdryC4iT8wgtGJhbzo5lkFZY72cptwRHGPQak3Q%3D%3D\",\"coverPictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/mobile_clinic_web_waivers_10_1776687931576_mi7ssdw24vp.webp?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=NTZmFPV%2B4kXcVyKKMxWfa0upOHt32F3RugCkAwe2vl2L4oao8mRCz0vtWISw7V5boZlKRLgCSjhrzMxpcE%2FqskLpLWQtYbcNC2fwcOK33MIUCbtqaaiOFJf1dc%2B0xS5kNAk15HGARKwQFUob%2B5hpaQb%2BJuQvJI1BewGRPCNuiqHnaBsJULIcz0jhda2morqvnsi739wRSmKvnVOYmvx8sFYVIVzva%2F67gtJwzjL%2Bv9FqJESRKIBQ58Eu7tNmEsRzj8Ey8BaGuX%2FCZv4nNCjXXcVQ14WqzYOl9D%2F8a9TJgNQ64n6OGU%2BqMnn5PGlDzw6DMd286vGq9GfOiVATurIxTw%3D%3D\",\"fbUrl\":\"https://wwdw.facebook.comds\",\"linkedinUrl\":\"https://www.linkedin.com/johndoe\",\"xUrl\":\"https://x.com\",\"instaUrl\":\"https://www.instagram.com/dimple/\",\"isSameEmail\":false,\"isSameMobile\":false,\"isSameAddress\":false,\"createdAt\":\"2026-01-07T06:24:21.491Z\",\"addFrom\":{\"apiUrl\":\"/verify-account\",\"description\":\"register user\",\"usedFunction\":\"verifyAccount\"},\"isShowMeScreen\":false,\"jerseyNumber\":\"$#$$77899\",\"jerseySize\":\"YS\",\"roles\":[\"user\",\"athlete\",\"admin\",\"parent\",\"coach\",\"manager\",\"scorekeeper\"],\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODg4NDM0NDMsImV4cCI6MTc5NjYxOTQ0M30.stHxXUL1vuwfo23xTV9ZseDKpIUiR9onuuvqASWFffg\"}"
+        },
+        {
+          "name": "initialRender",
+          "value": "1"
+        },
+        {
+          "name": "refreshToken",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODg4NDM0NDMsImV4cCI6MTc5NjYxOTQ0M30.stHxXUL1vuwfo23xTV9ZseDKpIUiR9onuuvqASWFffg"
+        },
+        {
+          "name": "currentUserDetails",
+          "value": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc4ODg0MzQ0MywiZXhwIjoxNzkxNDM1NDQzfQ.DX8g7pZDeUgCsW1h9YtvZgq0emXC7hhSuhbAhXngq44\",\"id\":5296,\"firstName\":\"Dhwanis\",\"lastName\":\"Parikh\",\"email\":\"dhwani@yopmail.com\",\"dialCode\":\"US\",\"countryCode\":\"+1\",\"mobile\":\"9512672992\",\"isEmailVerified\":false,\"isMobileVerified\":false,\"isPasswordReseted\":false,\"isVerified\":true,\"username\":null,\"isOldPrimaryContact\":false,\"address1\":\"Road 49, Fort Calhoun, NE, USA\",\"address2\":\"dhwani\",\"city\":\"Washington Countysdsd\",\"state\":\"Venaz\",\"zipCode\":\"68023\",\"dob\":\"2026-01-14T00:00:00.000Z\",\"gpa\":3,\"heightFeet\":10,\"heightInch\":10,\"weight\":147,\"school\":\"SSVVVV\",\"isOptIn\":true,\"optDate\":\"2026-03-16T14:31:09.377Z\",\"timeZone\":\"Asia/Calcutta\",\"profilePictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/image_cropper_7AE7FA5D-D458-4EBC-A53E-8FF523EF4D9B_1773656829363_qeugp.jpg?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=A1cXFoJgsVToTmp%2B8PnYZSw%2B%2FucKzCXIPB30w81gfTMxkt%2B36bdsNdH4zTCqAYCo%2FAFF9L2%2BsV8eNT6kDOIccJruuIB6CM2VYOi58zp9E5txfI0n1Lf2vvYOSFbtusKErdZfgJ%2BItkkTSJsWmmFEWs%2BaNfnEUgYRxwXuHDM2%2BvZ665uycpcJexeCxBUrhIYbZc9oq%2F36YDml22MA3agDuJEvA%2BHAn%2FkpQSbMbHakzJ6L037L52bXlekrw68ZFnkRZ0fWuy4IuwCHZwQ7nqtw6iVpTS5WbW444IOjXftZais648xhdryC4iT8wgtGJhbzo5lkFZY72cptwRHGPQak3Q%3D%3D\",\"coverPictureUrl\":\"https://storage.googleapis.com/sketchplay/Sk/Stage/profile/photo/mobile_clinic_web_waivers_10_1776687931576_mi7ssdw24vp.webp?GoogleAccessId=storage-upload-service%40main-shade-316711.iam.gserviceaccount.com&Expires=4070908800&Signature=NTZmFPV%2B4kXcVyKKMxWfa0upOHt32F3RugCkAwe2vl2L4oao8mRCz0vtWISw7V5boZlKRLgCSjhrzMxpcE%2FqskLpLWQtYbcNC2fwcOK33MIUCbtqaaiOFJf1dc%2B0xS5kNAk15HGARKwQFUob%2B5hpaQb%2BJuQvJI1BewGRPCNuiqHnaBsJULIcz0jhda2morqvnsi739wRSmKvnVOYmvx8sFYVIVzva%2F67gtJwzjL%2Bv9FqJESRKIBQ58Eu7tNmEsRzj8Ey8BaGuX%2FCZv4nNCjXXcVQ14WqzYOl9D%2F8a9TJgNQ64n6OGU%2BqMnn5PGlDzw6DMd286vGq9GfOiVATurIxTw%3D%3D\",\"fbUrl\":\"https://wwdw.facebook.comds\",\"linkedinUrl\":\"https://www.linkedin.com/johndoe\",\"xUrl\":\"https://x.com\",\"instaUrl\":\"https://www.instagram.com/dimple/\",\"isSameEmail\":false,\"isSameMobile\":false,\"isSameAddress\":false,\"createdAt\":\"2026-01-07T06:24:21.491Z\",\"addFrom\":{\"apiUrl\":\"/verify-account\",\"description\":\"register user\",\"usedFunction\":\"verifyAccount\"},\"isShowMeScreen\":false,\"jerseyNumber\":\"$#$$77899\",\"jerseySize\":\"YS\",\"roles\":[\"user\",\"athlete\",\"admin\",\"parent\",\"coach\",\"manager\",\"scorekeeper\"],\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTI5NiwiZmlyc3ROYW1lIjoiRGh3YW5pcyIsImxhc3ROYW1lIjoiUGFyaWtoIiwiZW1haWwiOiJkaHdhbmlAeW9wbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VyIiwiYXRobGV0ZSIsImFkbWluIiwicGFyZW50IiwiY29hY2giLCJtYW5hZ2VyIiwic2NvcmVrZWVwZXIiXSwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODg4NDM0NDMsImV4cCI6MTc5NjYxOTQ0M30.stHxXUL1vuwfo23xTV9ZseDKpIUiR9onuuvqASWFffg\"}"
+        }
+      ]
+    }
+  ]
+}
